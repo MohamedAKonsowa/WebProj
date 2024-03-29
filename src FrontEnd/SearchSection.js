@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PriceSlider from "./PriceSlider";
 import ClothesFilter from './ClothesFilter';
+import './searchScreen.css'
 
 export default function SearchSection() {
     const [selectedTypes, setSelectedTypes] = useState([]);
@@ -9,7 +10,7 @@ export default function SearchSection() {
     };
     return(
         <>
-            <div class = "test">
+            <div class = "search-side">
                     <div>
                         <b>Search By:</b>
                         <input type={"text"} class = "Bar"/>

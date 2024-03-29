@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './productDescription.css'
 const ProductDescriptionSection = ({product, setSelectedItems, selectedItems}) => {
     const addItemToCart = () => {
         if (!selectedItems.some(item => item.id === product.id)) {
@@ -8,12 +8,15 @@ const ProductDescriptionSection = ({product, setSelectedItems, selectedItems}) =
         }
     };
     return (
-        <div class="productDescription">
-            <img src={product.imageSrc} alt={product.productName} className="ProductDescription-image"/>
-            <div className="productDescription-text">
-                <h1>{product.productName}</h1>
+        <div className="main-containerdes">
+            <div className={"img-card"}>
+                <img src={product.imageSrc} alt={product.productName} className="ProductDescription-image"/>
+
+            </div>
+            <div className="description-area">
+                <h2>{product.productName}</h2>
                 <p>{product.description}</p>
-                <button onClick={addItemToCart}>Add to cart</button>
+                <a href={"#"} onClick={addItemToCart}>Add to cart</a>
             </div>
         </div>
     );

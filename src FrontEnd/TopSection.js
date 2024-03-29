@@ -1,7 +1,7 @@
 // TopSection.js
 import React from "react";
-import titleImage from "C:\\Users\\mkonm\\WebstormProjects\\front_end_my_part\\src\\WebLogo.png";
-
+import './Nav.css'
+import titleImage from "C:\\Users\\alieh\\WebstormProjects\\untitled10\\src\\WebLogo.png";
 export default function TopSection({ toggleSections, toggleHomeSearchSections, toggleCartSection }) {
     const handleSearchButtonClick = () => {
         toggleSections(true); // Show both search and product sections
@@ -16,15 +16,26 @@ export default function TopSection({ toggleSections, toggleHomeSearchSections, t
 
     return (
         <>
-            <div className="Top">
-                <img src={titleImage} alt="Placeholder Logo" />
+    <nav>
+    <div className={"nav-container"}>
+        <div className={"nav-display-flex justify-content align-center" }>
+            <div className={"nav-display-flex align-center"}>
+                <a href={"#"} onClick={handleHomeButtonClick}>
+                <img src={titleImage} alt="Placeholder Logo"/>
+                </a>
+
             </div>
-            <div className="Top">
-                <button onClick={handleSearchButtonClick}>Search</button>
-                <button onClick={handleHomeButtonClick}>Home</button>
-                <button onClick={handleCartButtonClick}>Cart</button>
-                <button>Contact Us</button>
-            </div>
+            <ul className={"nav-display-flex align-center justify-content"}>
+                <li><a href={"#"} onClick={handleHomeButtonClick}>Home</a></li>
+                <li><a href={"#"} onClick={handleSearchButtonClick}>Search</a></li>
+                <li><a href={"#"} onClick={handleCartButtonClick}>Cart</a></li>
+                <li><a href={"#"}>Contact us</a></li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+
+
         </>
     );
 }

@@ -1,8 +1,76 @@
-.Top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.test1{
+    margin-top: 10%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .Search {
     display: grid;
     grid-template-columns: 20% auto; /* 20% for SearchAside, rest for Products */

@@ -2,6 +2,7 @@ import React from 'react';
 import SearchSection from './SearchSection';
 import ProductHolder from './ProductHolder';
 import Product from './Product';
+import './searchScreen.css'
 
 const SearchPage = ({
                         showSearchSection,
@@ -11,9 +12,10 @@ const SearchPage = ({
                         setClickedItem,
                         toggleProductDescriptionSection}) => {
     return (
-        <div className="Search">
+        <div className="main-container">
             {showSearchSection && <SearchSection />}
             {showProductSection && (
+                <div className={"product-search-screen"}>
                 <ProductHolder products={productsData} toggleSections={toggleProductDescriptionSection} setClickedItem={setClickedItem}>
                     {productsData.map((product, index) => (
                         <Product
@@ -27,6 +29,7 @@ const SearchPage = ({
                         />
                     ))}
                 </ProductHolder>
+                </div>
             )}
         </div>
     );
